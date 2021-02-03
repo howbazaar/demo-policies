@@ -4,3 +4,6 @@ policies:
 
   - name: tims-demo-ec2
     resource: aws.ec2
+
+  - name: tims-demo-s3
+    resource: aws.s3
