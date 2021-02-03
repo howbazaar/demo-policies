@@ -9,3 +9,4 @@ collections:
       - us-east-1
     policies:
       - tims-demo-security-group
+      - tims-demo-s3
