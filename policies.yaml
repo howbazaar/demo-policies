@@ -7,3 +7,11 @@ policies:
 
   - name: tims-demo-s3
     resource: aws.s3
+
+  - name: demo-skipped
+    resource: ec2
+    mode:
+      type: cloudtrail
+      events:
+       - RunInstances
+

@@ -9,3 +9,4 @@ collections:
     policies:
       - tims-demo-security-group
       - tims-demo-s3
+      - demo-skipped
