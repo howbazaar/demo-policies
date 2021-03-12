@@ -6,7 +6,6 @@ collections:
       - 527016798229
     regions:
       - us-east-2
-      - us-east-1
     policies:
       - tims-demo-security-group
       - tims-demo-s3
