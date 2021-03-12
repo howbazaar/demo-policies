@@ -1,6 +1,6 @@
 collections:
   - name: "demo-time"
-    schedule: "rate(20 minutes)"
+    schedule: "rate(10 minutes)"
     accounts:
       # This is the only account that will work for now.
       - 527016798229
