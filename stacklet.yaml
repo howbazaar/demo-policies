@@ -3,7 +3,7 @@ collections:
     schedule: "rate(10 minutes)"
     accounts:
       # This is the only account that will work for now.
-      - 434520683652
+      - 527016798229
     regions:
       - us-east-2
     policies:
