@@ -1,5 +1,5 @@
 collections:
-  - name: "demo-time"
+  - name: "new-name"
     schedule: "rate(10 minutes)"
     accounts:
       # This is the only account that will work for now.
