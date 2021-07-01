@@ -15,3 +15,6 @@ policies:
       events:
        - RunInstances
 
+  - name: tims-demo-accounts
+    resource: aws.account
+    region: us-east-1
