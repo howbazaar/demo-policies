@@ -36,3 +36,12 @@ policies:
        - RunInstances
     metadata:
       test: 2
+
+  - name: test-event-3
+    resource: ec2
+    mode:
+      type: cloudtrail
+      events:
+       - RunInstances
+    metadata:
+      test: 3
