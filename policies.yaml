@@ -30,6 +30,7 @@ policies:
 
   - name: test-event-2
     resource: ec2
+    description: version two of the event
     mode:
       type: cloudtrail
       events:
