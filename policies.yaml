@@ -18,3 +18,21 @@ policies:
   - name: tims-demo-accounts
     resource: aws.account
     region: us-east-1
+
+  - name: test-event-1
+    resource: ec2
+    mode:
+      type: cloudtrail
+      events:
+       - RunInstances
+    metadata:
+      test: 1
+
+  - name: test-event-2
+    resource: ec2
+    mode:
+      type: cloudtrail
+      events:
+       - RunInstances
+    metadata:
+      test: 2
