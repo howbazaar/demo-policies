@@ -15,6 +15,16 @@ policies:
       events:
        - RunInstances
 
+  - name: lambda-created-missing-tag
+    resource: aws.lambda
+    mode:
+      type: cloudtrail
+      events:
+       - CreateFunction
+    filters:
+      - "tag:App": absent
+       
+
   - name: tims-demo-accounts
     resource: aws.account
     region: us-east-1
