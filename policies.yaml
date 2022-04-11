@@ -56,3 +56,23 @@ policies:
        - RunInstances
     metadata:
       test: 3
+  - name: public-access-s3-mark
+    resource: s3
+    conditions:
+      - region: us-east-1
+    metadata:
+      severity: medium
+    description: |
+      tag bucket with public read access acl and send slack notification
+    tags:
+      - secops
+      - "public access"
+    filters:
+      - type: global-grants
+        allow_website: false
+        permissions: [READ, READ_ACP]
+    actions:
+      - type: mark-for-op
+        tag: stacklet_public_access_s3_acl_policy
+        op: notify
+        days: 14
