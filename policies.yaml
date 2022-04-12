@@ -68,9 +68,7 @@ policies:
       - secops
       - "public access"
     filters:
-      - type: global-grants
-        allow_website: false
-        permissions: [READ, READ_ACP]
+      - Name: howbazaar-test
     actions:
       - type: mark-for-op
         tag: stacklet_public_access_s3_acl_policy
