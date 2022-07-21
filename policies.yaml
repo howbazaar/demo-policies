@@ -63,7 +63,7 @@ policies:
     metadata:
       test: 3
 
-- name: public-access-s3-mark
+  - name: public-access-s3-mark
     resource: s3
     conditions:
       - region: us-east-1
