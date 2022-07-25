@@ -7,6 +7,8 @@ policies:
 
   - name: tims-demo-s3
     resource: aws.s3
+    conditions:
+    - region: us-east-1
 
   - name: demo-skipped
     resource: ec2
@@ -33,7 +35,8 @@ policies:
 
   - name: tims-demo-accounts
     resource: aws.account
-    region: us-east-1
+    conditions:
+    - region: us-east-1
 
   - name: test-event-1
     resource: ec2
