@@ -87,3 +87,12 @@ policies:
         tag: stacklet_public_access_s3_acl_policy
         op: notify
         days: 14
+        
+  - name: new-sns-topics
+    resource: aws.sns
+    mode:
+      type: cloudtrail
+      events:
+        - event: CreateTopic
+          ids: responseElements.topicArn
+          source: sns.amazonaws.com
