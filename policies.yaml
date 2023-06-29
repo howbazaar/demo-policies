@@ -1,6 +1,6 @@
 policies:
   - name: thumper-check-alarm-has-actions
-    type: aws.alarm
+    resource: aws.alarm
     filters:
     - or:
       - OKActions: empty
