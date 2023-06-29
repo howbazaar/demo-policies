@@ -1,4 +1,11 @@
 policies:
+  - name: thumper-check-alarm-has-actions
+    type: aws.alarm
+    filters:
+    - or:
+      - OKActions: empty
+      - AlarmActions: empty
+
   - name: tims-demo-security-group
     resource: aws.security-group
 
