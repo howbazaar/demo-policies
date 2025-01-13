@@ -1,4 +1,9 @@
 policies:
+  - name: space-in-tag-filter
+    resource: aws.ec2
+    filters:
+    - 'tag:cost-center': '12345 '
+
   - name: thumper-check-alarm-has-actions
     resource: aws.alarm
     filters:
