@@ -105,11 +105,11 @@ policies:
     mode:
       type: gcp-audit
       methods:
-        google.pubsub.v1.Publisher.CreateTopic
+      - google.pubsub.v1.Publisher.CreateTopic
 
   - name: deleted-gcp-topics
     resource: gcp.pubsub-topic
     mode:
       type: gcp-audit
       methods:
-        google.pubsub.v1.Publisher.DeleteTopic
+      - google.pubsub.v1.Publisher.DeleteTopic
