@@ -100,11 +100,16 @@ policies:
         op: notify
         days: 14
         
-  - name: new-sns-topics
-    resource: aws.sns
+  - name: created-gcp-topics
+    resource: gcp.pubsub-topic
     mode:
-      type: cloudtrail
-      events:
-        - event: CreateTopic
-          ids: responseElements.topicArn
-          source: sns.amazonaws.com
+      type: gcp-audit
+      methods:
+        google.pubsub.v1.Publisher.CreateTopic
+
+  - name: deleted-gcp-topics
+    resource: gcp.pubsub-topic
+    mode:
+      type: gcp-audit
+      methods:
+        google.pubsub.v1.Publisher.DeleteTopic
