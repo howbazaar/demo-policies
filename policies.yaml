@@ -119,3 +119,9 @@ policies:
     mode:
       type: gcp-scc
       org: 1234
+
+  - name: gcp-subnet-findings
+    resource: gcp.subnet
+    mode:
+      type: gcp-scc
+      org: 1234
