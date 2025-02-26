@@ -118,7 +118,6 @@ policies:
     resource: gcp.bucket
     mode:
       type: gcp-scc
-      org: 1234
 
   - name: gcp-subnet-findings
     resource: gcp.subnet
