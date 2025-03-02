@@ -114,6 +114,13 @@ policies:
       methods:
       - google.pubsub.v1.Publisher.DeleteTopic
 
+  - name: created-gcp-buckets
+    resource: gcp.gucket
+    mode:
+      type: gcp-audit
+      methods:
+      - storage.buckets.create
+
   - name: gcp-bucket-findings
     resource: gcp.bucket
     mode:
