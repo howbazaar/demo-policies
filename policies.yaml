@@ -144,3 +144,12 @@ policies:
       transport:
         type: sqs
         queue: '{notify_queue}'
+
+  - name: new-sns-topics
+    resource: aws.sns
+    mode:
+      type: cloudtrail
+      events:
+        - event: CreateTopic
+          ids: responseElements.topicArn
+          source: sns.amazonaws.com
