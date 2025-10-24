@@ -145,7 +145,7 @@ policies:
         type: sqs
         queue: '{notify_queue}'
 
-  - name: new-sns-topics
+  - name: new-sns-topics-without-description
     resource: aws.sns
     mode:
       type: cloudtrail
@@ -153,3 +153,6 @@ policies:
         - event: CreateTopic
           ids: responseElements.topicArn
           source: sns.amazonaws.com
+      pattern:
+          detail:
+              requestParameters.attributes.DisplayName: [{"exists": False}]
