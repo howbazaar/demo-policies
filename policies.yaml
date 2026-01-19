@@ -156,3 +156,12 @@ policies:
       pattern:
           detail:
               requestParameters.attributes.DisplayName: [{"exists": False}]
+
+  - name: new-sns-topics
+    resource: aws.sns
+    mode:
+      type: cloudtrail
+      events:
+        - event: CreateTopic
+          ids: responseElements.topicArn
+          source: sns.amazonaws.com
