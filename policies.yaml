@@ -165,3 +165,35 @@ policies:
         - event: CreateTopic
           ids: responseElements.topicArn
           source: sns.amazonaws.com
+
+  - name: thumper-iam-roles
+    resource: aws.iam-role
+    metadata:
+      action_required: true
+      severity: high
+      remediation_effort: low
+      remediation_risk: low
+      message:
+        title: My policy title, used for Jira issue summary
+        info: Information about this policy
+        warning: Warning for this policy 
+        error: An ERROR for this policy 
+        body: This is the main body of the policy notification
+        pre_remediation:
+          description: "Make sure you do this beforehand"
+          checklist:
+            - "Step 1: Do this thing"
+            - "Step 2: This other thing is next"
+        acceptance_criteria:
+          description: "This is the acceptance criteria for this finding"
+          checklist:
+            - "Step 1: Do this thing for AC"
+            - "Step 2: Do this other thing for AC"
+            - "Step 3: Do this other other thing for AC"
+        documentation:
+          - title: Doc Link 1
+            link: https://google.com
+      recommended_actions:
+        remediation:
+          - description: Doc Link 2
+            content: https://example.com
